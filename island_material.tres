@@ -1,0 +1,32 @@
+[gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://0jvrurahqce8"]
+
+[ext_resource type="Shader" path="res://island.gdshader" id="1_fnbd0"]
+[ext_resource type="Gradient" uid="uid://c8paotb36ettj" path="res://island1_colorgrad.tres" id="2_x8ykf"]
+[ext_resource type="FastNoiseLite" uid="uid://cgpcqy2sc6raj" path="res://islandnoise.tres" id="3_m4wsp"]
+
+[sub_resource type="NoiseTexture" id="NoiseTexture_gv0tl"]
+width = 4225
+height = 4225
+color_ramp = ExtResource("2_x8ykf")
+noise = ExtResource("3_m4wsp")
+
+[sub_resource type="NoiseTexture" id="NoiseTexture_x6esb"]
+width = 4225
+height = 4225
+as_normal_map = true
+noise = ExtResource("3_m4wsp")
+
+[sub_resource type="NoiseTexture" id="NoiseTexture_p2yt7"]
+width = 4225
+height = 4225
+noise = ExtResource("3_m4wsp")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_fnbd0")
+shader_param/color = SubResource("NoiseTexture_gv0tl")
+shader_param/height = 30.0
+shader_param/heightmap = SubResource("NoiseTexture_x6esb")
+shader_param/noise = SubResource("NoiseTexture_p2yt7")
+shader_param/offset = Vector2(0, 0)
+shader_param/threshold = 0.198
