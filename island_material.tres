@@ -24,9 +24,9 @@ noise = ExtResource("3_m4wsp")
 [resource]
 render_priority = 0
 shader = ExtResource("1_fnbd0")
-shader_param/color = SubResource("NoiseTexture_gv0tl")
-shader_param/height = 30.0
-shader_param/heightmap = SubResource("NoiseTexture_x6esb")
-shader_param/noise = SubResource("NoiseTexture_p2yt7")
-shader_param/offset = Vector2(0, 0)
-shader_param/threshold = 0.198
+color = SubResource("NoiseTexture_gv0tl")
+height = 30.0
+heightmap = SubResource("NoiseTexture_x6esb")
+noise = SubResource("NoiseTexture_p2yt7")
+offset = Vector2(0, 0)
+threshold = 0.198

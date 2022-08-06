@@ -1,6 +1,5 @@
 shader_type spatial;
 
-
 uniform sampler2D noise;
 uniform sampler2D heightmap;
 uniform sampler2D color;
@@ -25,8 +24,9 @@ void vertex() {
 		VERTEX.y = n * d2;
 		norm = make_normal(texture(heightmap, UV+offset));
 		NORMAL = norm;
+	} else {
+		VERTEX.y -= 1000.0;
 	}
-
 	//COLOR = vec4(d, d, d, 1.0);
 }
 
