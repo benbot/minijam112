@@ -22,9 +22,6 @@ void fragment() {
 	
 	vec3 sum = noi1 + noi2 - vec3(1.0);
 	
-	ALPHA = 0.8;
-	
-	float depth = (texture(DEPTH_TEXTURE, SCREEN_UV)).z * 2.0 - 1.0;
 	vec3 o = mix(sum, vec3(0.0, 0.06, 1.0), 0.9);
 	
 	ALBEDO = o;

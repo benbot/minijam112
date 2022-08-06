@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://bc7lpelideoe5"]
+
+[ext_resource type="Texture2D" uid="uid://c6i6wn1n7bcuv" path="res://icon.png" id="1_ttwl8"]
+[ext_resource type="Script" path="res://battle/battle.gd" id="1_woaab"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vo73r"]
+size = Vector2(66.2548, 67.4021)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vfcur"]
+size = Vector2(5.29939, 127.34)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_woaab")
+speed = null
+
+[node name="bar" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(565, 170)
+scale = Vector2(9.65625, 1)
+texture = ExtResource("1_ttwl8")
+
+[node name="target" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(684, 168)
+scale = Vector2(0.698, 1.435)
+monitorable = false
+
+[node name="targettt" type="Sprite2D" parent="target"]
+modulate = Color(0, 1, 0.133333, 1)
+position = Vector2(-1.63055, -1.31957)
+scale = Vector2(1, 1)
+texture = ExtResource("1_ttwl8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="target"]
+position = Vector2(-1.33121, -0.711327)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_vo73r")
+
+[node name="player" type="CharacterBody2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(689, 168)
+scale = Vector2(2.45313, 1.51563)
+
+[node name="player" type="Sprite2D" parent="player"]
+modulate = Color(0, 0.483333, 1, 1)
+scale = Vector2(0.089172, 1.96907)
+texture = ExtResource("1_ttwl8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_vfcur")
+
+[node name="start" type="Node2D" parent="."]
+top_level = true
+position = Vector2(278, 171)
+
+[node name="end" type="Node2D" parent="."]
+top_level = true
+position = Vector2(857, 171)
+
+[node name="Camera2D" type="Camera2D" parent="."]

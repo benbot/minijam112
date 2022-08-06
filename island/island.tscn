@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1i2pej3rtro7"]
+
+[ext_resource type="Script" path="res://island/island.gd" id="1_3q03l"]
+[ext_resource type="ArrayMesh" uid="uid://gcu4kuxeqml5" path="res://island/untitled.obj" id="1_cokcn"]
+[ext_resource type="Material" uid="uid://djofqxdy7le8h" path="res://island/islandmat.tres" id="2_a4kjp"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_k2i5l"]
+radius = 1.41205
+
+[node name="island" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_3q03l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(11.4768, 0, 0, 0, 11.4768, 0, 0, 0, 11.4768, 0, 0, 0)
+shape = SubResource("CylinderShape3D_k2i5l")
+
+[node name="Node3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(48.1242, 0, 0, 0, 0.0962485, 0, 0, 0, 48.1242, 0, 0.267307, 0)
+lod_bias = 0.001
+ignore_occlusion_culling = true
+mesh = ExtResource("1_cokcn")
+surface_material_override/0 = ExtResource("2_a4kjp")

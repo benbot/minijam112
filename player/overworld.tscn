@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://brkjb8kd5hpd6"]
+
+[ext_resource type="PackedScene" uid="uid://c1i2pej3rtro7" path="res://island/island.tscn" id="1_6hgrt"]
+[ext_resource type="PackedScene" uid="uid://caab1kwjvase" path="res://player/PlayerCharacter.tscn" id="2_dvjf5"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8ssr5"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_nvrq4"]
+sky_material = SubResource("ProceduralSkyMaterial_8ssr5")
+
+[sub_resource type="Environment" id="Environment_5u6dq"]
+background_mode = 2
+background_energy = 0.2
+sky = SubResource("Sky_nvrq4")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="world" type="Node3D"]
+
+[node name="island" parent="." instance=ExtResource("1_6hgrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -63.6799)
+
+[node name="island2" parent="." instance=ExtResource("1_6hgrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.4383, 0, -63.6799)
+
+[node name="island3" parent="." instance=ExtResource("1_6hgrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.7716, 0, -63.6799)
+
+[node name="island4" parent="." instance=ExtResource("1_6hgrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -207.934)
+
+[node name="island5" parent="." instance=ExtResource("1_6hgrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -257.008, 0, -207.934)
+
+[node name="island6" parent="." instance=ExtResource("1_6hgrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 279.32, 0, -207.934)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.312335, -0.901406, 0.299858, -2.98023e-08, 0.315649, 0.948876, -0.949972, -0.296367, 0.0985881, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 250.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5u6dq")
+
+[node name="Player" parent="." instance=ExtResource("2_dvjf5")]

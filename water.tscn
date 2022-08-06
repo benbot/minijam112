@@ -1,48 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://8jvg4ws2m68v"]
+[gd_scene load_steps=5 format=3 uid="uid://8jvg4ws2m68v"]
 
-[ext_resource type="ArrayMesh" uid="uid://dnta1evuarknr" path="res://base_island_mesh.res" id="1_6psu6"]
+[ext_resource type="ArrayMesh" uid="uid://gcu4kuxeqml5" path="res://island/untitled.obj" id="1_0uybn"]
 [ext_resource type="Shader" path="res://water.gdshader" id="2_bq444"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_25osa"]
-
-[sub_resource type="NoiseTexture" id="NoiseTexture_ufykw"]
-seamless = true
-noise = SubResource("FastNoiseLite_25osa")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_dl3wq"]
-
-[sub_resource type="NoiseTexture" id="NoiseTexture_isluu"]
-seamless = true
-noise = SubResource("FastNoiseLite_dl3wq")
+[ext_resource type="Script" path="res://water.gd" id="3_m2g4j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jepdj"]
 render_priority = 3
 shader = ExtResource("2_bq444")
-n1 = SubResource("NoiseTexture_ufykw")
-n2 = SubResource("NoiseTexture_isluu")
-time_factor = Vector2(1, 2)
-wave_frequency = Vector2(12, 12)
-wave_strengh = Vector2(0.1, 0.05)
-
-[sub_resource type="GDScript" id="GDScript_v8ek3"]
-script/source = "@tool
-extends MeshInstance3D
-
-var a = 0.0;
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	print(delta);
-"
+shader_param/time_factor = null
+shader_param/wave_frequency = null
+shader_param/wave_strengh = null
 
 [node name="MeshInstance3D" type="MeshInstance3D"]
 transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 1.63788, 0.56243, 1.84011)
-mesh = ExtResource("1_6psu6")
+mesh = ExtResource("1_0uybn")
 skeleton = NodePath("../Node3D")
 surface_material_override/0 = SubResource("ShaderMaterial_jepdj")
-script = SubResource("GDScript_v8ek3")
+script = ExtResource("3_m2g4j")

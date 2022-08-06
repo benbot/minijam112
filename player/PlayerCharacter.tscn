@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://caab1kwjvase"]
+
+[ext_resource type="Script" path="res://player/PlayerCharacter.gd" id="1_jhlnf"]
+[ext_resource type="PackedScene" uid="uid://cu5xpdaheyrn0" path="res://player/ship.glb" id="1_nwwmc"]
+[ext_resource type="PackedScene" uid="uid://cgqkxaiwv4f0i" path="res://cam_rig.tscn" id="2_eusrj"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4b1ag"]
+radius = 1.268
+height = 4.684
+
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+transform = Transform3D(2.82301, 0, 0, 0, 2.82301, 0, 0, 0, 2.82301, 0, 5.93895, 0)
+script = ExtResource("1_jhlnf")
+
+[node name="Player" parent="." instance=ExtResource("1_nwwmc")]
+
+[node name="mergedBlocks(Clone)" parent="Player" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.12094, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.68911e-07, -0.880393, 0.59003)
+shape = SubResource("CapsuleShape3D_4b1ag")
+
+[node name="cam_rig" parent="." instance=ExtResource("2_eusrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916065, -1.56926, -4.48158)
+
+[editable path="Player"]

@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="ArrayMesh" path="res://experiments/depthtesting.obj" id="1_fddh4"]
+[ext_resource type="Shader" path="res://experiments/depthteset.gdshader" id="2_iat1h"]
+
+[sub_resource type="Shader" id="Shader_pktey"]
+code = "shader_type spatial;
+
+void vertex() {
+	VERTEX.y = sin(VERTEX.x + TIME);
+}
+
+void fragment() {
+	// Place fragment code here.
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6l7nj"]
+render_priority = 0
+shader = SubResource("Shader_pktey")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wm13a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jlbta"]
+render_priority = 1
+shader = ExtResource("2_iat1h")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.724635, 0.0105443, 0.689053, -0.0148319, 0.99989, 0.000296818, -0.688974, -0.010435, 0.724711, -0.00519862, -0.0694596, 0.0555811)
+mesh = ExtResource("1_fddh4")
+surface_material_override/0 = SubResource("ShaderMaterial_6l7nj")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.344166, 0.0184534)
+mesh = SubResource("PlaneMesh_wm13a")
+skeleton = NodePath("../MeshInstance3D")
+surface_material_override/0 = SubResource("ShaderMaterial_jlbta")

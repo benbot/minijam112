@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ca6vlwrit2gu1"
+path="res://.godot/imported/depthtesting.obj-c1880c1cba1f9781ad37b0e6743b65c7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/depthtesting.obj-c1880c1cba1f9781ad37b0e6743b65c7.mesh"]
+
+source_file="res://experiments/depthtesting.obj"
+dest_files=["res://.godot/imported/depthtesting.obj-c1880c1cba1f9781ad37b0e6743b65c7.mesh", "res://.godot/imported/depthtesting.obj-c1880c1cba1f9781ad37b0e6743b65c7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

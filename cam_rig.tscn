@@ -1,0 +1,95 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgqkxaiwv4f0i"]
+
+[ext_resource type="Script" path="res://Camera.gd" id="1_8we30"]
+[ext_resource type="PackedScene" uid="uid://8jvg4ws2m68v" path="res://water.tscn" id="2_vo801"]
+
+[node name="cam_rig" type="Node3D"]
+top_level = true
+script = ExtResource("1_8we30")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.354232, 0, 0, 0, 0.312171, 0.16742, 0, -0.16742, 0.312171, 0, 29.5684, 55.7869)
+projection = 1
+current = true
+size = 158.5
+far = 10000.0
+
+[node name="MeshInstance3D" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, 1.63788, -4.5966, -179.083)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, 201.281, -4.59658, -179.083)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, -197, -4.59657, -179.083)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, -396.074, -4.59657, -179.083)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D16" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, 1.63788, -99.0085, -3.04282)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D17" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, 201.281, -99.0085, -3.04279)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D18" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, -197, -99.0085, -3.04272)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D19" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, -396.074, -99.0085, -3.04268)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, 397.593, -4.59655, -179.083)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D20" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, 397.593, -99.4771, -2.16875)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, 1.63788, 86.7282, -349.368)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D7" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, 201.281, 86.7283, -349.367)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D8" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, -197, 86.7283, -349.367)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D9" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, -396.074, 86.7283, -349.367)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D10" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, 397.593, 86.7283, -349.367)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D11" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, 1.63788, 179.352, -522.073)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D12" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, 201.281, 179.352, -522.073)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D13" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, -197, 179.352, -522.073)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D14" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, -396.074, 179.352, -522.073)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D15" parent="Camera3D" instance=ExtResource("2_vo801")]
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, 397.593, 179.352, -522.073)
+skeleton = NodePath("../..")
