@@ -79,17 +79,5 @@ transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, 
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D12" parent="Camera3D" instance=ExtResource("2_vo801")]
-transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, 201.281, 179.352, -522.073)
-skeleton = NodePath("../..")
-
-[node name="MeshInstance3D13" parent="Camera3D" instance=ExtResource("2_vo801")]
-transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, -197, 179.352, -522.073)
-skeleton = NodePath("../..")
-
-[node name="MeshInstance3D14" parent="Camera3D" instance=ExtResource("2_vo801")]
-transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, -396.074, 179.352, -522.073)
-skeleton = NodePath("../..")
-
-[node name="MeshInstance3D15" parent="Camera3D" instance=ExtResource("2_vo801")]
-transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, 397.593, 179.352, -522.073)
+transform = Transform3D(100, 0, 0, 0, 0.881262, -47.2628, 0, 0.472628, 88.1262, 1.63788, 179.352, -522.073)
 skeleton = NodePath("../..")

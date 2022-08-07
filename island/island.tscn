@@ -7,8 +7,7 @@
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_k2i5l"]
 radius = 1.41205
 
-[node name="island" type="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="island" type="Area3D" groups=["islands"]]
 script = ExtResource("1_3q03l")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

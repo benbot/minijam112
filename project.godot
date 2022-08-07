@@ -8,16 +8,22 @@
 
 config_version=5
 
+_global_script_classes=[{
+"base": "Resource",
+"class": &"BattleSpec",
+"language": &"GDScript",
+"path": "res://battle/BattleSpecResource.gd"
+}]
+_global_script_class_icons={
+"BattleSpec": ""
+}
+
 [application]
 
 config/name="minijam112"
 run/main_scene="res://player/overworld.tscn"
 config/features=PackedStringArray("4.0", "Vulkan Mobile")
 config/icon="res://icon.png"
-
-[autoload]
-
-GameMaster="*res://GameMaster.gd"
 
 [input]
 

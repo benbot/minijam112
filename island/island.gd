@@ -2,12 +2,12 @@ extends Area3D
 
 @export var treasure := 100
 
+signal open_battle
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	self.body_entered.connect(_on_player_enter)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _on_player_enter(b: CollisionObject3D):
+	if b.is_in_group("player"):
+		emit_signal("open_battle")
