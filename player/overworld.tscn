@@ -57,7 +57,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -257.008, 0, -207.934)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 279.32, 0, -207.934)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.312335, -0.901406, 0.299858, -2.98023e-08, 0.315649, 0.948876, -0.949972, -0.296367, 0.0985881, 0, 0, 0)
+transform = Transform3D(-0.319257, -0.528127, 0.786866, -0.297908, 0.844154, 0.445707, -0.899626, -0.0921183, -0.426835, 0, 0, 0)
 shadow_enabled = true
 directional_shadow_max_distance = 250.0
 
@@ -65,6 +65,7 @@ directional_shadow_max_distance = 250.0
 environment = SubResource("Environment_5u6dq")
 
 [node name="Player" parent="." instance=ExtResource("2_dvjf5")]
+rot_speed = 8.0
 
 [node name="cam_rig" parent="Player" instance=ExtResource("3_u85mn")]
 
@@ -81,12 +82,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -402.0
+offset_top = -256.0
+offset_right = 422.0
+offset_bottom = 256.0
 grow_horizontal = 2
 grow_vertical = 2
+stretch = true
 metadata/_edit_layout_mode = 1
 
 [node name="battle_view" type="SubViewport" parent="battle_control/SubViewportContainer"]

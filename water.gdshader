@@ -20,9 +20,9 @@ void fragment() {
 	vec3 noi1 = texture(n1, UV + time).rgb;
 	vec3 noi2 = texture(n2, UV - time * 0.2).rgb;
 	
-	vec3 sum = noi1 + noi2 - vec3(1.0);
+	vec3 sum = (noi1 + noi2) * 2.0 - 1.5;
 	
-	vec3 o = mix(sum, vec3(0.0, 0.06, 1.0), 0.9);
+	vec3 o = sum * vec3(0.0, 0.4, 1.0;
 	
 	ALBEDO = o;
 }
